@@ -65,7 +65,7 @@ ft.app(target=main, view=ft.AppView.WEB_BROWSER)
 
 запустите еще раз, и теперь вы мгновенно получите веб-приложение:
 
-![safari](flet-counter-safari.png)
+![safari](images/flet-counter-safari.png)
 
 # Глава 2. Создание Flet-приложений на Python
 
@@ -162,7 +162,7 @@ def main(page: ft.Page):
 ft.app(target=main)
 ```
 
-![control](controls-text.png)
+![control](images/controls-text.png)
 
 > **ПРИМЕЧАНИЕ**
 >
@@ -242,7 +242,7 @@ def main(page):
 ft.app(target=main)
 ```
 
-![simple-ToDo.png](simple-ToDo.png)
+![simple-ToDo.png](images/simple-ToDo.png)
 
 > **ИНФОРМАЦИЯ**
 >
@@ -311,7 +311,7 @@ def main(page):
 ft.app(target=main)
 ```
 
-![control-refs.png](control-refs.png)
+![control-refs.png](images/control-refs.png)
 
 В самом начале `main()` метода мы создаем три элемента управления, которые собираемся использовать в `on_click` обработчике кнопки: два `TextField` для имени и фамилии и `Column` - контейнер для поздравительных сообщений. Мы создаем элементы управления со всеми их заданными свойствами, и в конце `main()` метода, при `page.add()` вызове, мы используем их ссылки (переменные).
 
@@ -386,7 +386,7 @@ def main(page):
 ft.app(target=main)
 ```
 
-![control-refs-rewritten.png](control-refs-rewritten.png)
+![control-refs-rewritten.png](images/control-refs-rewritten.png)
 
 Теперь мы можем четко видеть в `page.add()` структуру страницы и все элементы управления, из которых она построена.
 
@@ -405,7 +405,7 @@ btn = ft.ElevatedButton("Click me!")
 page.add(btn)
 ```
 
-![getting-user-input-elevated-button.png](getting-user-input-elevated-button.png)
+![getting-user-input-elevated-button.png](images/getting-user-input-elevated-button.png)
 
 Все события, генерируемые элементами управления на веб-странице, постоянно отправляются обратно в ваш скрипт, так как же вы реагируете на нажатие кнопки?
 
@@ -444,7 +444,8 @@ def main(page: ft.Page):
 ft.app(target=main)
 ```
 
-![getting-user-input-event-handlers.png](getting-user-input-event-handlers.png)
+![getting-user-input-event-handlers.png](images/getting-user-input-event-handlers.png)
+
 ## Текстовое поле (Textbox )
 
 Flet предоставляет ряд элементов управления для построения форм: TextField], Checkbox, Dropdown, ElevatedButton.
@@ -482,7 +483,7 @@ def main(page: ft.Page):
 ft.app(target=main)
 ```
 
-![getting-user-input-textbox.png](getting-user-input-textbox.png)
+![getting-user-input-textbox.png](images/getting-user-input-textbox.png)
 
 ## Флажок (Checkbox)
 
@@ -507,7 +508,7 @@ def main(page):
 ft.app(target=main)
 ```
 
-![getting-user-input-checkbox.png](getting-user-input-checkbox.png)
+![getting-user-input-checkbox.png](images/getting-user-input-checkbox.png)
 
 ## Выпадающий список (Dropdown)
 
@@ -535,7 +536,8 @@ def main(page: ft.Page):
 ft.app(target=main)
 ```
 
-![getting-user-input-dropdown.png](getting-user-input-dropdown.png)
+![getting-user-input-dropdown.png](images/getting-user-input-dropdown.png)
+
 # Глава 4.  Сочетания клавиш
 
 Надежная поддержка клавиатуры является ключом к повышению производительности пользователя при использовании веб-сайта и, особенно, настольного приложения. Действительно, постоянное переключение между мышью и клавиатурой может быть действительно раздражающим.
@@ -569,11 +571,12 @@ ft.Text("Press any key with a combination of CTRL, ALT, SHIFT and META keys...")
 ft.app(target=main)
 ```
 
-![keyboard-shortcuts.png](keyboard-shortcuts.png)
+![keyboard-shortcuts.png](images/keyboard-shortcuts.png)
+
 # Глава 5. Цвета
 
 
-![color_palettes.png](color_palettes.png)
+![color_palettes.png](images/color_palettes.png)
 
 ## Значение цвета
 
@@ -598,9 +601,9 @@ c2 = ft.Container(bgcolor='yellow')
 
 #### Тематические цвета
 
-![theme_colors.png](theme_colors.png)
+![theme_colors.png](images/theme_colors.png)
 
-В [`theme.color_scheme`](https://flet.dev/docs/controls/page#colorscheme-class) есть 30 именованных цветов темы, которые генерируются на основе свойства `color_scheme_seed`. Начальное значение цвета по умолчанию - "синий".
+В `theme.color_scheme` есть 30 именованных цветов темы, которые генерируются на основе свойства `color_scheme_seed`. Начальное значение цвета по умолчанию - "синий".
 
 ```python
 # example for generating page theme colors based on the seed color  
@@ -620,13 +623,13 @@ page.theme = ft.Theme(
 )
 ```
 
-![[Pasted image 20240327230207.png]]
+![](images/Pasted image 20240327230207.png)
 
 Цвета темы определяют резервные цвета для большинства элементов управления Flet.
 
 #### Цветовые палитры
 
-![[Pasted image 20240327230412.png]]
+![](images/Pasted image 20240327230412.png)
 
 Первоначально созданные Material Design в 2014 году, цветовые палитры состоят из цветов, разработанных для гармоничного сочетания.
 
@@ -661,7 +664,7 @@ color = "#7fff6666"
 
 Большинство элементов управления Flet имеют цвета по умолчанию, определенные `color_scheme` которые могут быть переопределены на разных уровнях.
 
-![[Pasted image 20240327230837.png]]
+![](images/Pasted image 20240327230837.png)
 
 ### Уровень контроля
 
@@ -704,3 +707,4 @@ ft.app(target=main)
 Если свойство color элемента управления, тема для конкретного элемента управления или тема ближайшего предка не указаны, ближайшим предком будет страница, и будут использоваться цвета со страницы по умолчанию `color_scheme`.
 
 #  Глава 6. Большие списки
+
